@@ -1,0 +1,11 @@
+footer {
+    position: relative;
+    bottom: 0;
+    width: 99%;
+    /* height: 10rem;            Footer height */
+  }
+.main-link{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
