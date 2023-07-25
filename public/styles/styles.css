@@ -1,8 +1,10 @@
 body{
-    background-color: #CEE6F3;
+    background-color: #F5F5F5;
+    color: #3F2305;
 }
 nav{
-    display: flex
+    display: flex;
+    color: #3F2305;
 }
 .nav-item{
     padding: 10px;
@@ -14,10 +16,6 @@ nav{
 .links{
     width: 20%;
 }
-footer {
-    flex: 0 0 auto;
-  }
-
 .container{
     width: 40%;
     margin-top: 10vh;
@@ -47,4 +45,9 @@ footer {
 }
 p{
     font-size: 2rem;
+}
+
+.heading{
+    border-radius: 5%;
+    background-color: #DFD7BF;
 }
