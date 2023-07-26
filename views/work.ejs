@@ -1,20 +1,22 @@
 <%- include("partials/header.ejs") %>
-<div class="heading">
-    <h1>Work</h1>
-</div>
-
-<% for(var i = 0; i<list.length; i++) { %>
-    <div class="item">
-        <input type="checkbox">
-        <p>
-            <%= list[i]; %>
-        </p>
+<div class="list">
+    <div class="heading">
+        <h1>Work</h1>
     </div>
-<% } %>
 
-<form action="/work" method="POST">
-    
-    <input type="text" name="nextTaskWork" placeholder="next...">
-    <input type="submit" value="OK">
-</form>
+    <% for(var i = 0; i<list.length; i++) { %>
+        <div class="item">
+            <input type="checkbox">
+            <p>
+                <%= list[i]; %>
+            </p>
+        </div>
+    <% } %>
+
+    <form action="/work" method="POST">
+        
+        <input class="text-input" type="text" name="nextTaskWork" placeholder="  next...">
+        <input type="submit" value="ADD">
+    </form>
+</div>
 <%- include("partials/footer.ejs") %>
