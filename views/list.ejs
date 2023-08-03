@@ -20,11 +20,10 @@
     <% }); %>
 
     <form action="/" method="POST">
-        
-        <input class="text-input" type="text" name="nextTask" placeholder="  next...">
-        <button type="submit" name="list" value="<%= listHead %>">ADD</button>
-
-        
+        <div class="ip">
+            <input class="text-input" type="text" name="nextTask" autofocus="autofocus" placeholder="  next...">
+            <button type="submit" name="list" value="<%= listHead %>">ADD</button>
+        </div>        
     </form>
 </div>
 <%- include("partials/footer.ejs")  %>
