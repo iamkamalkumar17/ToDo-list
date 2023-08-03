@@ -2,25 +2,29 @@
 <div class="list">
     <div class="heading">
         <h1>
-            <%= head %>
+            <%= listHead %>
         </h1>
     </div>
     
 
-    <% list.forEach(element => { %>
-        <form action="/delete" method="post">
+    <% activities.forEach(element => { %>
+        <form action="/deleteActivity" method="post">
         <div class="item">
             <input type="checkbox" name="checkbox" value="<%= element._id %>" onChange="this.form.submit()">
             <p>
                 <%= element.name%>
             </p>
         </div>
+        <input type="hidden" name="listName" value="<%= listHead %>"></input>
     </form>
     <% }); %>
-    <form action="/today" method="POST">
+
+    <form action="/" method="POST">
         
-        <input class="text-input" type="text" name="nextTaskToday" placeholder="  next...">
-        <button type="submit" name="list" value="<%= head %>">ADD</button>
+        <input class="text-input" type="text" name="nextTask" placeholder="  next...">
+        <button type="submit" name="list" value="<%= listHead %>">ADD</button>
+
+        
     </form>
 </div>
 <%- include("partials/footer.ejs")  %>
