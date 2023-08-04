@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -11,9 +12,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //set the static folder to public
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://127.0.0.1:27017/todolistDB").then(() => {
+mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASS}@cluster0.uqx03df.mongodb.net/todolistDB`).then(() => {
   console.log("mongodb connected at port 27017");
 });
+
+// //local connection
+// mongoose.connect("mongodb://127.0.0.1:27017/todolistDB").then(() => {
+//   console.log("connected at port 27017");
+// });
+
+
+
 
 const itemSchema = new mongoose.Schema({
   name: String
